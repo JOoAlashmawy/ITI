@@ -1,0 +1,3 @@
+The Apache Commons IO are the components of the Apache Commons which are derived from Java API and provides various utility classes for common operations for File IO covering wide range of use cases. 
+It helps avoid writing boilerplate code. 
+This tutorial covers most of the topics required for a basic understanding of Apache Commons IO and to get a feel of how it works.
