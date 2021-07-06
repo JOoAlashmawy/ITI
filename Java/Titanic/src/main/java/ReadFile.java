@@ -28,4 +28,10 @@ public class ReadFile {  // The file is JSON
         }
         return allPassenger;
     }
+    
+    public static Table  readCsvFile() throws IOException {
+        Table titanicData;
+        titanicData = Table.read().csv("Data_to_use\\titanic.csv");
+        return titanicData;
+    }
 }
