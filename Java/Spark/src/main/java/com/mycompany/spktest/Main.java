@@ -23,7 +23,7 @@ public class Main {
         }
 
 //        List<Map.Entry> sortedTitle = ReadFile.fileTitleReader("src/main/resources/data/USvideos.csv");
-//        //show Tags data
+//        //show Title data
 //        for (Map.Entry<String, Long> entry : sortedTitle) {
 //            System.out.println (entry.getKey () + " : " + entry.getValue ());
 //        }
