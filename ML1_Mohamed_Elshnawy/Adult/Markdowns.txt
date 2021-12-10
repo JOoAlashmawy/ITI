@@ -1,0 +1,28 @@
+# Contnet <a id='Jump'></a>
+
+##   1.[Import and reading the Data Section](#imports)
+---
+##   2.[Exploration](#EDA)<br>
+---
+##   3.[DataPreprocess](#preprocess)
+###  <br>3.1.[Clean NA values](#NA)
+
+###  <br>3.2.[Scalling](#scaling)
+###  <br>3.3.[Clean Duplication](#Duplication)<br>
+---
+## 4.[Modeling](#Models)<br>
+### 4.1.[KNN](#KNN)
+### 4.2.[Logistic  Regression](#lr)
+### 4.3.[SVM](#svm)
+
+<center> <h1> EDA </h1> </center>
+
+---------------------------------------------------
+# Contnet <a id='content'></a>
+
+##   1.[EDA](#EDA)
+##   2.[DataPreprocessing](#DataPreprocessing)
+##   3.[Modeling](#Modeling)<br>
+
+# EDA
+#### [Back to CONTENT](#content)

@@ -1,0 +1,76 @@
+1- upload dataset
+2- read into panadas df
+3- print and see if there's missing values
+4- remove missing values >> 
+			missing = train.isna().sum()
+			missing = missing[missing > 0]
+			missing.plot.bar()
+			
+			or
+			
+			missing = train.isna().sum()
+			missing = missing[missing > 0]
+			missing.sort_values(inplace = True)
+			missing.plot.bar()
+			
+5- if there's an information of the feature try to get it .. even from the client himselft .. don't let it for the model
+6- you can now divide by counts of records to get percentage of missing %
+7- now u have to make categorical(Qualitative) or numerical(Quantitative) for each feature and know which type is it >>> panadas select_dtypes
+																	
+																	quantitaive = train.select_dtypes(include=['float64','int64'])
+																	quantitaive
+																	
+																	quantitaive.drop(['Id'], inplace = True , axis = 1) # axis 1 represents columns
+																	quantitaive
+																	
+																	qualitative = train.select_dtypes(exclude=['float64','int64'])
+																	qualitative
+
+
+8- now we should draw the relationships with the output
+9- but we will see the distribution of the output feature >> histogram
+													
+													y = train['SalePrice']
+													y.hist(bins = 50) # apporximatly we can see it without noise 
+													plt.show
+													
+10- if i see the histogram that is not normal distribution then we use LOG >>   Log(10) = 1
+																			    Log(100) = 2
+																			    Log(1000) = 3
+																			  
+																			    the range is small for high values of the log itself
+
+11- then we each feature by doing this >>   quantitaive.hist(bins = 50 , figsize = (20,15))
+										    plt.show
+
+
+12- we look at the data and see the graphs .. is it related or making normal distribution or what?
+
+13- #Optional# U can use melt function in panadas then FacetGrid from seaborn 
+
+14- we now have to see the correlation between features and the output >>> 
+																			quantitaive_list = [f for f in tain.columns if train.dtypes[f] != 'object']
+																			quantitaive_list.remove('SalePrice')
+																			quantitaive_list.remove('Id')
+																			
+																			quantitaive_data = train[quantitaive.columns+['SalePrice']]
+																			corr_matrix = quantitaive_data.corr()
+																			corr_matrix["SalePrice"].sort_values(ascending = False)
+
+																	
+15- the SalePrice has correlation of 1 but if we find -1 correlation that means it is inverse relation
+16- the features that have correlation > 0.5 it means they depend on it (important feature) 
+17- Now u can make the heatmap to see it >>> 
+												#Visualize correlation
+												plt.subplots(figsize=(20,15))
+												ax = sns.heatmap(
+												corr_matrix , vmin= -1 , vmax = 1 ,center = 0,
+												cmap=sns.diverging_palette(20,220, n=200),
+												square = True
+																)
+												
+18- we can use boxplot
+19- encoding for categorical variables (onehot encoding[disadvantage is that it makes many features] - ordinal encoding)
+20- curse of dimensionality (the number of features is exponentially more) (makes learning hard)
+21- we can use get dummies (makes onehot encoding)
+
