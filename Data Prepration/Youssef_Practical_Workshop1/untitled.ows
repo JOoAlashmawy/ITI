@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme description="" title="" version="2.0">
+	<nodes>
+		<node id="0" name="CSV File Import" position="(150, 150)" project_name="Orange3" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" title="data1" version="" />
+		<node id="1" name="CSV File Import" position="(158.0, 280.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" title="data2" version="" />
+		<node id="2" name="Merge Data" position="(319.0, 218.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" title="Merge Data" version="" />
+		<node id="3" name="Data Table" position="(440.0, 220.0)" project_name="Orange3" qualified_name="Orange.widgets.data.owtable.OWDataTable" title="Data Table" version="" />
+		<node id="4" name="Scatter Plot" position="(426.0, 98.0)" project_name="Orange3" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" title="Scatter Plot" version="" />
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="Data" sink_node_id="2" source_channel="Data" source_node_id="0" />
+		<link enabled="true" id="1" sink_channel="Extra Data" sink_node_id="2" source_channel="Data" source_node_id="1" />
+		<link enabled="true" id="2" sink_channel="Data" sink_node_id="3" source_channel="Data" source_node_id="2" />
+		<link enabled="true" id="3" sink_channel="Data" sink_node_id="4" source_channel="Data" source_node_id="2" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties format="literal" node_id="0">{'_session_items': [('C:/Users/Youssef/Desktop/Data Prepration/Practical_Workshop1/data1.csv', {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 4, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/Youssef/Desktop/Data Prepration/Practical_Workshop1', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02c\x00\x00\x00\xd0\x00\x00\x03\x8e\x00\x00\x02,\x00\x00\x02k\x00\x00\x00\xef\x00\x00\x03\x86\x00\x00\x02$\x00\x00\x00\x00\x00\x00\x00\x00\x05V', '__version__': 1}</properties>
+		<properties format="literal" node_id="1">{'_session_items': [('C:/Users/Youssef/Desktop/Data Prepration/Practical_Workshop1/data2.csv', {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 9, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/Youssef/Desktop/Data Prepration/Practical_Workshop1', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\x15\x00\x00\x00\xb7\x00\x00\x03@\x00\x00\x02\x13\x00\x00\x02\x1d\x00\x00\x00\xd6\x00\x00\x038\x00\x00\x02\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x05V', '__version__': 1}</properties>
+		<properties format="literal" node_id="2">{'attr_pairs': (True, True, [['Name', 'Name']]), 'auto_apply': True, 'controlAreaVisible': True, 'merging': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x01\xdb\x00\x00\x00\xbb\x00\x00\x03z\x00\x00\x02\x10\x00\x00\x01\xe3\x00\x00\x00\xda\x00\x00\x03r\x00\x00\x02\x08\x00\x00\x00\x00\x00\x00\x00\x00\x05V', '__version__': 1}</properties>
+		<properties format="pickle" node_id="3">gAN9cQAoWAsAAABhdXRvX2NvbW1pdHEBiFgOAAAAY29sb3JfYnlfY2xhc3NxAohYEgAAAGNvbnRy
+b2xBcmVhVmlzaWJsZXEDiFgOAAAAZGlzdF9jb2xvcl9SR0JxBChL3EvcS9xL/3RxBVgTAAAAc2F2
+ZWRXaWRnZXRHZW9tZXRyeXEGQzIB2dDLAAIAAAAAARMAAABYAAAEQgAAAnIAAAEbAAAAdwAABDoA
+AAJqAAAAAAAAAAAFVnEHWAsAAABzZWxlY3Rfcm93c3EIiFgNAAAAc2VsZWN0ZWRfY29sc3EJXXEK
+WA0AAABzZWxlY3RlZF9yb3dzcQtdcQxYFQAAAHNob3dfYXR0cmlidXRlX2xhYmVsc3ENiFgSAAAA
+c2hvd19kaXN0cmlidXRpb25zcQ6JWAsAAABfX3ZlcnNpb25fX3EPSwFYEAAAAGNvbnRleHRfc2V0
+dGluZ3NxEF1xEWNvcmFuZ2V3aWRnZXQuc2V0dGluZ3MKQ29udGV4dApxEimBcRN9cRQoWAQAAAB0
+aW1lcRVHQdgrRczcUdhYBgAAAHZhbHVlc3EWfXEXaA9LAXNYCgAAAGF0dHJpYnV0ZXNxGH1xGShY
+BAAAAFJhbmtxGksCWA8AAABOdW1iZXIgb2YgZ29hbHNxG0sCWAkAAABIZWlnaHRfY21xHEsCWAsA
+AABBcHBlYXJhbmNlc3EdSwJYBAAAAFdpbnNxHksCWAYAAABMb3NzZXNxH0sCWA8AAABHb2Fsc19w
+ZXJfbWF0Y2hxIEsCWAcAAABBc3Npc3RzcSFLAlgMAAAAWWVsbG93X2NhcmRzcSJLAlgJAAAAUmVk
+X2NhcmRzcSNLAnVYBQAAAG1ldGFzcSR9cSUoWAQAAABOYW1lcSZLA1gNAAAATmF0aW9uYWxpdGll
+c3EnSwN1dWJhdS4=
+</properties>
+		<properties format="pickle" node_id="4">gAN9cQAoWAsAAABhdXRvX2NvbW1pdHEBiFgLAAAAYXV0b19zYW1wbGVxAohYEgAAAGNvbnRyb2xB
+cmVhVmlzaWJsZXEDiFgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXEEQzIB2dDLAAIAAAAAANwAAABS
+AAAEeQAAAngAAADkAAAAcQAABHEAAAJwAAAAAAAAAAAFVnEFWAkAAABzZWxlY3Rpb25xBk5YEQAA
+AHRvb2x0aXBfc2hvd3NfYWxscQeIWAUAAABncmFwaHEIfXEJKFgLAAAAYWxwaGFfdmFsdWVxCkuA
+WA0AAABjbGFzc19kZW5zaXR5cQuJWAsAAABqaXR0ZXJfc2l6ZXEMSwBYEwAAAGxhYmVsX29ubHlf
+c2VsZWN0ZWRxDYlYFgAAAG9ydGhvbm9ybWFsX3JlZ3Jlc3Npb25xDolYCwAAAHBvaW50X3dpZHRo
+cQ9LClgJAAAAc2hvd19ncmlkcRCJWAsAAABzaG93X2xlZ2VuZHERiFgNAAAAc2hvd19yZWdfbGlu
+ZXESiXVYCwAAAF9fdmVyc2lvbl9fcRNLBFgQAAAAY29udGV4dF9zZXR0aW5nc3EUXXEVY29yYW5n
+ZXdpZGdldC5zZXR0aW5ncwpDb250ZXh0CnEWKYFxF31xGChYBAAAAHRpbWVxGUdB2CtF9CiJulgG
+AAAAdmFsdWVzcRp9cRsoWAoAAABhdHRyX2NvbG9ycRxYBAAAAFJhbmtxHUtmhnEeWAoAAABhdHRy
+X2xhYmVscR9OSv7///+GcSBYCgAAAGF0dHJfc2hhcGVxIU5K/v///4ZxIlgJAAAAYXR0cl9zaXpl
+cSNOSv7///+GcSRYBgAAAGF0dHJfeHElWAsAAABBcHBlYXJhbmNlc3EmS2aGcSdYBgAAAGF0dHJf
+eXEoWA8AAABOdW1iZXIgb2YgZ29hbHNxKUtmhnEqaAh9cStoE0sEdVgKAAAAYXR0cmlidXRlc3Es
+fXEtKGgdSwJoKUsCWAkAAABIZWlnaHRfY21xLksCaCZLAlgEAAAAV2luc3EvSwJYBgAAAExvc3Nl
+c3EwSwJYDwAAAEdvYWxzX3Blcl9tYXRjaHExSwJYBwAAAEFzc2lzdHNxMksCWAwAAABZZWxsb3df
+Y2FyZHNxM0sCWAkAAABSZWRfY2FyZHNxNEsCdVgFAAAAbWV0YXNxNX1xNihYBAAAAE5hbWVxN0sD
+WA0AAABOYXRpb25hbGl0aWVzcThLA3V1YmF1Lg==
+</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
