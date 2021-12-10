@@ -1,0 +1,29 @@
+Hierarchical Clustering is unsupervised learning
+
+it uses clustering analysis with agglomerative algorithm
+
+single linkeage = minimum distance 
+complete linkeage = maximum distance 
+
+-first we have data matrix
+1- we do euclidean distance 
+2- then distance matrix
+3- then keep updating distance matrix (iterations)
+4- until final result matrix 
+
+dendogram: method to know the number of cluters
+
+average method: takes all the distances between all points of data 
+centroid method: takes only the distance between the centroid
+ward's method: works on variance 
+
+choosing which method is with hob :D
+
+the best method is ward's method (default and very known as it comes from variance)
+
+take care of your memory so it doesn't get "Memory error"
+
+k means is not good result for global optimum
+
+
+
