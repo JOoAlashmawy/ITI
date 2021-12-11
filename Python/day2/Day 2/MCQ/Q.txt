@@ -1,0 +1,35 @@
+1- given list check if it in ascending order ?
+2- replace [min max] inplace ?
+3- find last occurrence for queries ?
+4- find uniqe but not sorted lst ?
+5- find uniqe but sorted lst ?
+6- find_3_min ?
+7- find most frequent number ?
+8- compute number of appeared digits in list ?
+9- lst2 is is subseuence of lst1 ?
+10- get min element from spesific type ?
+11- encrypte given strig ?
+12- sort elements by data types ?
+13- find count pairs it's summition equal to 100 --> (pi + pj == 100) ,i<j ?
+
+-------------------------------------
+
+Q 8 
+
+
+"""
+test case for you
+78 0 0 0 -307
+
+Output
+0 4
+1 0
+2 0
+3 1
+4 0
+5 0
+6 0
+7 2
+8 1
+9 0
+"""

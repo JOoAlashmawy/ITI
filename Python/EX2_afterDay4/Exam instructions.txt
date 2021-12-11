@@ -1,0 +1,12 @@
+drive_link:
+
+https://drive.google.com/drive/folders/1ydHEh3QS3Keaik89J2XybnLi3NfaTflw?usp=sharing
+
+
+you will upload zip file with name ( username_group#.zip)  to the Previous link
+that contains:
+
+1. text file with name "practical2_part1.txt" : conatins all the solution of practical2 part1
+
+2. parctical2_part2 solution  >> python file or jupyter notebook and any another attached files
+

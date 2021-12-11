@@ -1,0 +1,265 @@
+1-
+
+lst = list(map(int, input().split()))
+flag =1   
+for pos in range(1, len(lst)):
+    if lst[pos] < lst[pos-1]:
+        flag= False
+        break
+if flag :
+    print('YES')
+else :
+    print('NO')
+     -------------------------------
+lst = list(map(int, input().split()))
+if sorted(lst) == lst:
+   print('YES')
+else :
+    print('NO')
+_____________________________________________________________
+2-
+lst = list(map(int, input().split()))
+mn = min(lst)
+mx = max(lst)
+for idx, item in enumerate(lst):
+    if item == mn:
+        lst[idx] = mx
+    elif item == mx:
+        lst[idx] = mn
+print(lst)
+_____________________________________________________________
+3-
+lst = list(map(int, input().split()))
+queries = list(map(int, input().split()))
+lst.reverse()   # to make it easy to find last occurrence
+
+for q in queries:
+    idx = -1
+    if q in lst:
+        idx = lst.index(q)   # idx in reversed list
+        idx = len(lst) - idx - 1    # flip to get original
+
+    print('Query', q, 'answer', idx)
+
+       -------------------------------
+
+lst = list(map(int, input().split()))
+queries = list(map(int, input().split()))
+
+# As values are 0-500, we can make list of 501 mark the last value in it
+# Then we answer the queries directly
+
+last_value_pos = [-1] * 501     # 501 values that are -1 (default for not exist)
+
+# mark in the list where the item appear
+# as we process in order: the last occurrence overwrite previous values
+for idx, item in enumerate(lst):
+    last_value_pos[item] = idx
+
+for q in queries:
+    print('Query', q, 'answer', last_value_pos[q])
+
+# Linear time solution! O(N)
+_____________________________________________________________
+4-
+lst = list(map(int, input().split()))
+
+lst_ret = []
+for item in lst:
+    if item not in lst_ret:
+        lst_ret.append(item)
+lst = lst_ret
+print(lst )
+_____________________________________________________________
+5-
+lst = list(map(int, input().split()))
+lst_ret = []
+for idx, item in enumerate(lst):
+    # In a sorted list: if the previous number != me ==> I am a new one
+    if idx == 0 or lst[idx] != lst[idx-1]:
+        lst_ret.append(item)
+lst = lst_ret
+print(lst)
+_____________________________________________________________
+6- 
+lst = list(map(int, input().split())) 
+    
+mn_lst = []
+# the idea: keep aading to this list
+# sort and remove the 4th item
+# then the list always have the min 3 numbers
+
+for item in lst:
+    mn_lst.append(item)
+
+    if len(mn_lst) > 3:
+        mn_lst.sort()
+        mn_lst.pop()
+
+mn_lst.sort()
+print(mn_lst)
+
+_____________________________________________________________
+
+7-
+lst = list(map(int, input().split()))
+
+# With simple change we can use the practice code
+# we will shift all the data to start from ZERO (so we can index normally)
+# then later undo the effect
+# to do that: just subtract the minimum
+# e.g. if input is -10 20 -2 9 20
+# the min is -10
+# subtract it from all: 0 30_oop 8 19 30_oop
+# Find max 30_oop. Undo with -10 ==> 20
+mn, mx = min(lst), max(lst)
+freq_lst  = [0] * (mx - mn +1)
+
+for value in lst:
+   # print(value - mn)
+    freq_lst[value - mn] += 1
+
+# argmax - Observe: the tie is also handled!
+most_value = freq_lst.index(max(freq_lst))
+frequency = freq_lst[most_value]
+most_value+=mn
+
+print('Value', most_value, 'repeated', frequency)
+_____________________________________________________________
+
+8-
+
+lst = list(map(int, input().split()))
+freq = [0] * 10     # to compute fromquency from 0 to 9
+for value in lst:
+    value = abs(value)  # get rid of the sign
+
+    if value == 0:
+        freq[0] += 1    # special case
+    else:
+        while value > 0:
+            digit = value % 10
+            value //= 10
+            freq[digit] += 1
+
+
+for idx in range(10):
+    print(idx, freq[idx])
+
+"""
+test case for you
+78 0 0 0 -307
+
+Output
+0 4
+1 0
+2 0
+3 1
+4 0
+5 0
+6 0
+7 2
+8 1
+9 0
+"""
+
+_____________________________________________________________
+9-
+status  = False  
+lst1 = list(map(int, input().split()))
+lst2 = list(map(int, input().split()))
+
+if len(lst2) == 0:
+    status =  True     # special case
+
+# Iterate on the main list, for every number
+# if it the FIRST number in lst_check
+# then lst_check so far in order
+# we remove it
+# if all lst_check is empty: we found them: consective and in order
+if status == 0 :
+    for item in lst1:    
+    
+        if item == lst2[0]:
+            lst2.pop(0)    # pop(0) is efficient
+
+status =  (len(lst2) == 0)
+
+if status:
+    print('YES')
+else:
+    print('NO')
+
+_____________________________________________________________
+10-
+
+lst = [10, -2.5, 20, 5, 'mostafa', 5.2, 'Ziad']
+
+print(min ([item for item in lst if type(item) is int]))
+print(min ([item for item in lst if type(item) is float]))
+print(min ([item for item in lst if type(item) is str]))
+
+_____________________________________________________________
+
+11-
+# Create a dict with requested mapping
+from_str = 'abcdefghijklmnopqrstuvwxyz0123456789'
+to_str = 'YZIMNESTODUAPWXHQFBRJKCGVL!@#$%^&*()'
+# create the dict with comprehension
+dict = {from_str[idx]:to_str[idx] for idx in range(len(from_str))}
+
+string = input()
+res = ''
+for char in string:
+    if char in dict:
+        char = dict[char]
+    res += char
+print(res)
+_____________________________________________________________
+
+12-
+
+lst = [10, 'most', 2.5, 7, 'aly', 9, 4.5, 2, 'ziad', -4, 1.1, [1, 5], 5, [0, 7, 8]]
+    
+dict = {}
+for item in lst:
+    t = type(item)
+    dict.setdefault(t, [])
+    dict[t].append(item)
+
+    #SyntaxError: iterable unpacking cannot be used in comprehension
+    #return [*sorted(lst) for lst in dict.values()]
+lsts = [sorted(lst) for lst in dict.values()]
+print(lsts)
+
+_____________________________________________________________
+
+13-
+
+lst = list(map(int, input().split()))
+ans = 0
+for idx in range(len(lst)-1):
+    if 100 - lst[idx] in lst[idx+1 : ]:
+        ans+=1
+print(ans)   
+	------------------------
+	
+lst = list(map(int, input().split()))
+lst.sort()
+l = 0
+r = len(lst) - 1
+ans = 0
+while l < r :
+  if lst[l] + lst[r] == 100:
+      ans+=1
+      l+=1
+      r-=1
+  
+  elif  lst[l] + lst[r] > 100:
+         r-=1
+  else :
+     l+=1 
+
+print(ans)	
+	
+_____________________________________________________________
